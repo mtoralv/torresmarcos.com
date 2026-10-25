@@ -18,6 +18,10 @@ Open any of the HTML files in a browser by double-clicking it. Links such as `/u
 
 Copy an existing project block in `projects.html` (from `<h2>` to `</ul>`) and fill it in: what it is, why, built with, what I learned and a link to the code.
 
+## License
+
+The code is released under the [MIT License](LICENSE). The content (texts and images) is © Marcos Torres Álvarez, all rights reserved.
+
 ## Milestones
 
 - 2026-10-25: Chose the domain torresmarcos.com: it was available, it's timeless and it's a .com.
@@ -34,9 +38,9 @@ Copy an existing project block in `projects.html` (from `<h2>` to `</ul>`) and f
 - 2026-10-25: Wrote a short about me.
 - 2026-10-25: Added the Uses page.
 - 2026-10-25: Added the Projects page.
+- 2026-10-25: Chose the licences: MIT for the code, all rights reserved for the content.
 
 ## To do
 
 - Consider GitHub Actions.
-- Choose a licence for the content.
 - Decide whether search engines should index the site.
