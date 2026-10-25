@@ -5,18 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projects · Marcos Torres Álvarez</title>
     <meta name="description" content="Projects by Marcos Torres Álvarez.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <p><a href="/">← Home</a></p>
-    <h1>Projects</h1>
+    <div class="page">
+      <header class="site-header">
+        <a class="site-name" href="/">Marcos Torres Álvarez</a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="/projects" aria-current="page">Projects</a>
+          <a href="/uses">Uses</a>
+        </nav>
+      </header>
 
-    <h2>torresmarcos.com</h2>
-    <p>This website: a personal site where I introduce myself and show what I work on.</p>
-    <ul>
-      <li>Why: I wanted one place under my own name and domain that I control, and that I can move to another host without rebuilding it.</li>
-      <li>Built with: plain HTML, GitHub Pages and a domain managed in Cloudflare.</li>
-      <li>What I learned: how DNS records (A and CNAME) point a domain to a host, how GitHub Pages serves a site straight from a repository, and how to work with branches and pull requests.</li>
-      <li>Code: <a href="https://github.com/mtoralv/torresmarcos.com">github.com/mtoralv/torresmarcos.com</a></li>
-    </ul>
+      <main>
+        <h1>Projects</h1>
+
+        <article class="project">
+          <h3>torresmarcos.com</h3>
+          <p>This website: a personal site where I introduce myself and show what I work on.</p>
+          <ul class="tags" aria-label="Built with">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>GitHub Pages</li>
+            <li>Cloudflare DNS</li>
+          </ul>
+          <ul>
+            <li><span class="label">Why:</span> I wanted one place under my own name and domain that I control, and that I can move to another host without rebuilding it.</li>
+            <li><span class="label">Built with:</span> plain HTML, GitHub Pages and a domain managed in Cloudflare.</li>
+            <li><span class="label">What I learned:</span> how DNS records (A and CNAME) point a domain to a host, how GitHub Pages serves a site straight from a repository, and how to work with branches and pull requests.</li>
+            <li><span class="label">Code:</span> <a href="https://github.com/mtoralv/torresmarcos.com">github.com/mtoralv/torresmarcos.com</a></li>
+          </ul>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 Marcos Torres Álvarez</p>
+      </footer>
+    </div>
   </body>
 </html>
