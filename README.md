@@ -8,7 +8,8 @@ Plain HTML, one file per page:
 
 - `index.html`: home page with a short about me
 - `uses.html`: what I use
-- `projects.html`: my projects
+- `projects.html`: the list of my projects
+- `projects/`: one page per project (for example `projects/torresmarcos.html`, served at `/projects/torresmarcos`)
 - `style.css`: the look of every page (colours, fonts, layout)
 - `favicon.svg`: the icon in the browser tab
 - `fonts/`: IBM Plex Mono, served from this repo so no third party is contacted
@@ -19,7 +20,8 @@ Open any of the HTML files in a browser by double-clicking it. The styles load, 
 
 ## Add a project
 
-Copy an existing project block in `projects.html` (from `<article class="project">` to `</article>`) and fill it in: what it is, the tags, why, built with, what I learned and a link to the code.
+1. Copy `projects/torresmarcos.html` to `projects/<name>.html` and fill it in: title, summary, year, tags, code link, why and what I learned. Keep `../` in front of `style.css` and `favicon.svg`.
+2. Copy a row in `projects.html` (from `<li class="project-row">` to its closing `</li>`), put it at the top of the list and point its link to `/projects/<name>`.
 
 ## License
 
@@ -44,6 +46,7 @@ The code is released under the [MIT License](LICENSE). The content (texts and im
 - 2026-10-25: Chose the licences: MIT for the code, all rights reserved for the content.
 - 2026-10-25: Added the design: dark by default with a light version, IBM Plex Mono served from the repo, a top menu, a favicon and a © line in the footer.
 - 2026-10-26: Changed the home page to a short "hi, i'm Marcos." intro with links to the University of Málaga and MART Formula Student.
+- 2026-10-26: Turned the Projects page into a list and gave each project its own page.
 
 ## To do
 
