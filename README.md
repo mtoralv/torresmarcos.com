@@ -43,9 +43,9 @@ The code is released under the [MIT License](LICENSE). The content (texts and im
 - 2026-10-25: Added the Projects page.
 - 2026-10-25: Chose the licences: MIT for the code, all rights reserved for the content.
 - 2026-10-25: Added the design: dark by default with a light version, IBM Plex Mono served from the repo, a top menu, a favicon and a © line in the footer.
+- 2026-10-26: Changed the home page to a short "hi, i'm Marcos." intro with links to the University of Málaga and MART Formula Student.
 
 ## To do
 
 - Consider GitHub Actions.
 - Decide whether search engines should index the site.
-- Link MART Formula Student and the University of Málaga on the home page.

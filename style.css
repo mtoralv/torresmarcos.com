@@ -146,13 +146,6 @@ body {
   padding-block: 2rem 0;
 }
 
-.eyebrow {
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--accent);
-}
-
 .intro h1 {
   font-size: clamp(1.75rem, 5.5vw, 2.5rem);
   font-weight: 600;
@@ -239,6 +232,18 @@ li + li {
 
 li::marker {
   color: var(--accent);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.lead p {
+  margin: 0;
+}
+
+.lead p + p {
+  margin-top: 0.25rem;
 }
 
 .lead {
