@@ -47,9 +47,21 @@
 
         <h2>Why</h2>
         <p>I wanted one place under my own name and domain that I control, and that I can move to another host without rebuilding it.</p>
+        <ul>
+          <li><strong>torresmarcos.com:</strong> it was available, it won't age, and it's a .com.</li>
+          <li><strong>Cloudflare:</strong> I compared it with Porkbun and picked Cloudflare for the extra customisation and control, even though it ties the domain to its own DNS.</li>
+          <li><strong>Plain HTML and CSS:</strong> I considered Astro, but plain HTML is simpler for now and easy to migrate later.</li>
+          <li><strong>GitHub Pages:</strong> it's free, and a site this light doesn't need more.</li>
+          <li><strong>Text first:</strong> I wrote the content before working on the look, because the design depends on what it has to hold.</li>
+        </ul>
 
         <h2>What I learned</h2>
-        <p>How DNS records (A and CNAME) point a domain to a host, how GitHub Pages serves a site straight from a repository, and how to work with branches and pull requests.</p>
+        <p>I had never used GitHub Pages before this.</p>
+        <ul>
+          <li>How to serve a repository from a custom domain on GitHub Pages.</li>
+          <li>What A and CNAME records do: four A records point the bare domain to GitHub's servers, and a CNAME points <code>www</code> to my GitHub Pages address. I set them up in Cloudflare.</li>
+          <li>How to turn on Enforce HTTPS so every visit goes over a secure connection.</li>
+        </ul>
       </main>
 
       <footer class="site-footer">
