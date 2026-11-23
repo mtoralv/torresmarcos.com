@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blackjack Monte Carlo engine · Marcos Torres Álvarez</title>
+    <meta name="description" content="A Blackjack Monte Carlo simulator in Java by Marcos Torres Álvarez.">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="site-name" href="/">Marcos Torres Álvarez</a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="/projects" aria-current="page">Projects</a>
+          <a href="/uses">Uses</a>
+          <a href="/cv">CV</a>
+        </nav>
+      </header>
+
+      <main>
+        <p class="breadcrumb"><a href="/projects">projects</a> / Blackjack Monte Carlo engine</p>
+        <h1>Blackjack Monte Carlo engine</h1>
+        <p class="lead">A Blackjack simulator in Java that plays millions of hands to measure strategies, card counting and betting systems, with a Jupyter notebook for the analysis.</p>
+
+        <dl class="facts">
+          <div>
+            <dt>Year</dt>
+            <dd><time datetime="2026">2026</time></dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>
+              <ul class="tags">
+                <li>Java</li>
+                <li>Python</li>
+                <li>pandas</li>
+                <li>matplotlib</li>
+                <li>Jupyter</li>
+                <li>GitHub Actions</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Code</dt>
+            <dd><a href="https://github.com/mtoralv/blackjack-montecarlo-engine">github.com/mtoralv/blackjack-montecarlo-engine</a></dd>
+          </div>
+        </dl>
+
+        <h2>Why</h2>
+        <p>I wanted to check empirically how the different strategies compare, and whether a player can get an edge over the house or Blackjack is simply a losing game. So I built the game first and then replaced the player with code that plays millions of hands.</p>
+        <ul>
+          <li><strong>Engine:</strong> 6 decks by default, with splits, doubles, surrender and the usual table rules, all configurable from the command line.</li>
+          <li><strong>Strategies:</strong> how to play (basic strategy and a few naive ones) and how much to bet (flat, Hi-Lo counting, Martingale, Oscar&rsquo;s Grind, 1-3-2-6) are separate, so any pair can be simulated. The terminal game is just one more playing strategy that reads from the keyboard.</li>
+          <li><strong>Results:</strong> basic strategy gives a house edge of 0.37 %, which matches the published value for these rules. Hi-Lo counting turns it slightly positive. Betting systems don&rsquo;t change the return, only the risk: with a 100-unit bankroll, 97 % of Martingale players go broke within 5,000 hands.</li>
+        </ul>
+
+        <h2>What I learned</h2>
+        <ul>
+          <li>A Monte Carlo result is only useful with its margin of error. A house edge of 0.37 % is smaller than the noise of a few thousand hands, so I needed millions of hands and 95 % confidence intervals to tell strategies apart.</li>
+          <li>House edge and player return are different numbers. Changing the bet size can&rsquo;t change what you lose per hand played; it only changes how fast you win or lose.</li>
+          <li>The rules matter as much as the strategy: paying 6:5 instead of 3:2 for a blackjack multiplies the house edge by almost five, and card counting gains less when the shoe is reshuffled earlier.</li>
+          <li>Comparing my results with published values is a good way to test a simulator: when the house edge matched, I knew the rules were right.</li>
+          <li>Fixing the random seed makes every simulation reproducible, which made bugs much easier to track down.</li>
+          <li>Exporting the results to CSV and analysing them with pandas and matplotlib in a Jupyter notebook.</li>
+        </ul>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 Marcos Torres Álvarez</p>
+      </footer>
+    </div>
+  </body>
+</html>

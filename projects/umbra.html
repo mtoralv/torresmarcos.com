@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Umbra · Marcos Torres Álvarez</title>
+    <meta name="description" content="Umbra, an exoplanet transit detector written in Java by Marcos Torres Álvarez.">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="site-name" href="/">Marcos Torres Álvarez</a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="/projects" aria-current="page">Projects</a>
+          <a href="/uses">Uses</a>
+          <a href="/cv">CV</a>
+        </nav>
+      </header>
+
+      <main>
+        <p class="breadcrumb"><a href="/projects">projects</a> / Umbra</p>
+        <h1>Umbra</h1>
+        <p class="lead">A Java tool that finds planets in star brightness data: it spots the dips when a planet crosses its star, fits the orbital period and estimates the planet&rsquo;s size.</p>
+
+        <dl class="facts">
+          <div>
+            <dt>Year</dt>
+            <dd><time datetime="2026">2026</time></dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>
+              <ul class="tags">
+                <li>Java</li>
+                <li>Maven</li>
+                <li>JUnit</li>
+                <li>Python</li>
+                <li>Jupyter</li>
+                <li>GitHub Actions</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>Code</dt>
+            <dd><a href="https://github.com/mtoralv/Umbra">github.com/mtoralv/Umbra</a></dd>
+          </div>
+        </dl>
+
+        <h2>Why</h2>
+        <p>I wanted to see how much I could get out of a star&rsquo;s brightness alone, and to learn more about astronomy and astrophysics along the way. When a planet passes in front of its star, the star gets slightly dimmer for a few hours, and that dip is the only signal Umbra uses.</p>
+        <p>The first version detected dips in a hand-typed list of numbers. This one reads real light curves exported from the Kepler and TESS space telescopes and runs from the command line:</p>
+        <ul>
+          <li><strong>Detection:</strong> the baseline is the median brightness and the noise is estimated from the median absolute deviation, so the transits themselves and outliers barely move them. Points below the threshold are grouped into transits.</li>
+          <li><strong>Period:</strong> each transit gets an orbit number and a straight line is fitted to the transit times by least squares, so a missing transit doesn&rsquo;t break it.</li>
+          <li><strong>Planet size:</strong> the depth of the dip gives the planet-to-star radius ratio, and Kepler&rsquo;s third law gives the orbital distance.</li>
+          <li><strong>Variable stars:</strong> an optional running median removes slow changes in the star&rsquo;s own brightness before looking for transits.</li>
+        </ul>
+        <p>On TESS data of the hot Jupiter HD 189733 b it finds 11 transits in one sector, gets the period within 0.002 % of the published value and the radius within 2 %.</p>
+
+        <h2>What I learned</h2>
+        <ul>
+          <li>Real data is messy: the star changes brightness on its own, there are gaps and missing values, and a simple threshold on a percentage of the baseline stops working.</li>
+          <li>Why the median and the MAD are better than the mean and the standard deviation when the data has the very outliers you are looking for.</li>
+          <li>Fitting a line by least squares to get the period and its uncertainty.</li>
+          <li>Where a simple model falls short: the radius comes out about 2 % too big because the star is brighter at the centre than at the edges (limb darkening), and Umbra doesn&rsquo;t model that.</li>
+          <li>Setting up a Maven project with JUnit tests and running them on every push with GitHub Actions.</li>
+        </ul>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 Marcos Torres Álvarez</p>
+      </footer>
+    </div>
+  </body>
+</html>
