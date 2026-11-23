@@ -33,28 +33,6 @@ The PDFs in `cv/` are built from a LaTeX source that is kept outside this repo. 
 
 The code is released under the [MIT License](LICENSE). The content (texts and images) is © Marcos Torres Álvarez, all rights reserved. The IBM Plex Mono font is under the [SIL Open Font License](fonts/IBM-Plex-Mono-LICENSE.txt).
 
-## Milestones
-
-- 2026-10-25: Chose the domain torresmarcos.com: it was available, it's timeless and it's a .com.
-- 2026-10-25: Compared Porkbun and Cloudflare and chose Cloudflare for the customisation and control of its dashboard, even though it requires using its DNS.
-- 2026-10-25: Created the repo.
-- 2026-10-25: Weighed Astro against plain HTML and chose HTML: simple for now and easy to migrate.
-- 2026-10-25: Chose GitHub Pages: it's free and the site is lightweight.
-- 2026-10-25: Learned how to set up a custom domain on GitHub Pages.
-- 2026-10-25: Learned the DNS record types (A and CNAME) and set them up in Cloudflare.
-- 2026-10-25: Set the records to DNS only (grey cloud), so visits go straight to GitHub without passing through Cloudflare.
-- 2026-10-25: Enabled Enforce HTTPS.
-- 2026-10-25: Decided to write the text before the visual identity, because the look depends on the content.
-- 2026-10-25: Decided to work with branches and pull requests.
-- 2026-10-25: Wrote a short about me.
-- 2026-10-25: Added the Uses page.
-- 2026-10-25: Added the Projects page.
-- 2026-10-25: Chose the licences: MIT for the code, all rights reserved for the content.
-- 2026-10-25: Added the design: dark by default with a light version, IBM Plex Mono served from the repo, a top menu, a favicon and a © line in the footer.
-- 2026-10-26: Changed the home page to a short "hi, i'm Marcos." intro with a link to the University of Málaga.
-- 2026-10-26: Turned the Projects page into a list and gave each project its own page.
-- 2026-11-20: Added the CV page with my CV in English and Spanish.
-
 ## To do
 
 - Consider GitHub Actions.
