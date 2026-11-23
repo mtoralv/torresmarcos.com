@@ -15,6 +15,8 @@ Plain HTML, one file per page:
 - `style.css`: the look of every page (colours, fonts, layout)
 - `favicon.svg`: the icon in the browser tab
 - `fonts/`: IBM Plex Mono, served from this repo so no third party is contacted
+- `robots.txt`: tells search engines they may crawl the whole site and where the sitemap is
+- `sitemap.xml`: the list of public pages, for search engines
 
 ## View it locally
 
@@ -22,8 +24,9 @@ Open any of the HTML files in a browser by double-clicking it. The styles load, 
 
 ## Add a project
 
-1. Copy `projects/torresmarcos.html` to `projects/<name>.html` and fill it in: title, summary, year, tags, code link, why and what I learned. Keep `../` in front of `style.css` and `favicon.svg`.
+1. Copy `projects/torresmarcos.html` to `projects/<name>.html` and fill it in: title, summary, year, tags, code link, why and what I learned. Keep `../` in front of `style.css` and `favicon.svg`, and set the `canonical` link to `https://torresmarcos.com/projects/<name>`.
 2. Copy a row in `projects.html` (from `<li class="project-row">` to its closing `</li>`), put it at the top of the list and point its link to `/projects/<name>`.
+3. Add `https://torresmarcos.com/projects/<name>` to `sitemap.xml`.
 
 ## Update the CV
 
@@ -36,4 +39,3 @@ The code is released under the [MIT License](LICENSE). The content (texts and im
 ## To do
 
 - Consider GitHub Actions.
-- Decide whether search engines should index the site.
