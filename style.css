@@ -310,6 +310,10 @@ code {
   color: var(--muted);
 }
 
+.links a.email::after {
+  content: none;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
